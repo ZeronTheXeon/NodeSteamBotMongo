@@ -1,0 +1,178 @@
+{
+    "SCOUT (Trading Card)": {
+    "buy": 0,
+    "stocklimit": 0
+  },
+  "HEAVY (Trading Card)": {
+    "buy": 0,
+    "sell": 0
+  },
+  "MEDIC (Trading Card)": {
+    "buy": 0,
+    "sell": 0
+  },
+  "SNIPER (Trading Card)": {
+    "buy": 0,
+    "sell": 0
+  },
+  "PYRO (Trading Card)": {
+    "buy": 0,
+    "sell": 0
+  },
+  "SOLDIER (Trading Card)": {
+    "buy": 0,
+    "sell": 0
+  },
+  "DEMOMAN (Trading Card)": {
+    "buy": 0,
+    "sell": 0
+  },
+  "ENGINEER (Trading Card)": {
+    "buy": 0,
+    "sell": 0
+  },
+  "SPY (Trading Card)": {
+    "buy": 0,
+    "sell": 0
+  },
+  "SCOUT (Foil Trading Card)": {
+    "buy": 0,
+    "sell": 0
+  },
+  "HEAVY (Foil Trading Card)": {
+    "buy": 0,
+    "sell": 0
+  },
+  "MEDIC (Foil Trading Card)": {
+    "buy": 0,
+    "sell": 0
+  },
+  "SNIPER (Foil Trading Card)": {
+    "buy": 0,
+    "sell": 0
+  },
+  "PYRO (Foil Trading Card)": {
+    "buy": 0,
+    "sell": 0
+  },
+  "SOLDIER (Foil Trading Card)": {
+    "buy": 0,
+    "sell": 0
+  },
+  "DEMOMAN (Foil Trading Card)": {
+    "buy": 0,
+    "sell": 0
+  },
+  "ENGINEER (Foil Trading Card)": {
+    "buy": 0,
+    "sell": 0
+  },
+  "SPY (Foil Trading Card)": {
+    "buy": 0,
+    "sell": 0
+  },
+  "Bounty Hunter": {
+    "buy": 0,
+    "sell": 0
+  },
+  "Vengeful Spirit": {
+    "buy": 0,
+    "sell": 0
+  },
+  "Tidehunter (Trading Card)": {
+    "buy": 0,
+    "sell": 0
+  },
+  "Razor": {
+    "buy": 0,
+    "sell": 0
+  },
+  "Riki": {
+    "buy": 0,
+    "sell": 0
+  },
+  "Tiny": {
+    "buy": 0,
+    "sell": 0
+  },
+  "Tusk": {
+    "buy": 0,
+    "sell": 0
+  },
+  "Phantom Lancer": {
+    "buy": 0,
+    "sell": 0
+  },
+  "Bounty Hunter (Foil)": {
+    "buy": 0,
+    "sell": 0
+  },
+  "Vengeful Spirit (Foil)": {
+    "buy": 0,
+    "sell": 0
+  },
+  "Tidehunter (Foil Trading Card)": {
+    "buy": 0,
+    "sell": 0
+  },
+  "Razor (Foil)": {
+    "buy": 0,
+    "sell": 0
+  },
+  "Riki (Foil)": {
+    "buy": 0,
+    "sell": 0
+  },
+  "Tiny (Foil)": {
+    "buy": 0,
+    "sell": 0
+  },
+  "Tusk (Foil)": {
+    "buy": 0,
+    "sell": 0
+  },
+  "Phantom Lancer (Foil)": {
+    "buy": 0,
+    "sell": 0
+  },
+  "Anarchist (Foil)": {
+    "buy": 0,
+    "sell": 0
+  },
+  "FBI (Foil)": {
+    "buy": 0,
+    "sell": 0
+  },
+  "Balkan (Foil)": {
+    "buy": 0,
+    "sell": 0
+  },
+  "IDF (Foil)": {
+    "buy": 0,
+    "sell": 0
+  },
+  "SWAT (Foil)": {
+    "buy": 0,
+    "sell": 0
+  },
+  "SWAT": {
+    "buy": 0,
+    "sell": 0
+  },
+  "IDF": {
+    "buy": 0,
+    "sell": 0
+  },
+  "Balkan": {
+    "buy": 0,
+    "sell": 0
+  },
+  "FBI": {
+    "buy": 0,
+    "sell": 0
+  },
+  "Anarchist": {
+    "buy": 0,
+    "sell": 0
+  }
+}

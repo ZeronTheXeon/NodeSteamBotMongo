@@ -1,0 +1,58 @@
+{
+  "Scrap Metal":
+  {
+  "buy": 0.11,
+    "sell": 0.11
+  },
+  "Reclaimed Metal":
+  {
+  "buy": 0.33,
+    "buy": 0.33
+  },
+  "Refined Metal":
+	{
+	"buy": 0.99,
+    "sell": 0.99
+	},
+	"Reinforced Robot Humor Suppression Pump":
+  {
+    "buy": 0.03666667,
+    "sell":0.055
+    },
+  "Reinforced Robot Emotion Detector":
+  {
+    "buy": 0.03666667,
+    "sell":0.055
+    },
+  "Reinforced Robot Bomb Stabilizer":
+  {
+    "buy": 0.03666667,
+    "sell":0.055
+    },
+  "Battle-Worn Robot Taunt Processor":
+  {
+    "buy": 0.33,
+    "sell":0.44
+    },
+  "Battle-Worn Robot KB-808":
+      {
+    "buy": 0.33,
+    "sell":0.44
+    },
+  "Battle-Worn Robot Money Furnace":
+  {
+    "buy": 0.33,
+    "sell":0.44
+    },
+
+  "Pristine Robot Brainstorm Bulb":
+  {
+    "buy": 0.33,
+    "sell":0.55
+    },
+  "Pristine Robot Currency Digester":
+  {
+    "buy": 0.33,
+    "sell":0.55
+    }
+}

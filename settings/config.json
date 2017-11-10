@@ -1,0 +1,21 @@
+{
+	"username": "UserName Goes HEre",
+	"password": "Password Goes Here",
+	"sharedSecret": "Shared Secret Goes HEre",
+	"IdentitySecret": "Identity Secret Goes HEre",
+	"OwnerID": "Owner D Goes HEre",
+	"SteamName" : "[MarketWh_Bot] Robo Part Bot",
+	"GroupLink": "steamcommunity.com/groups/MarketWH",
+    "Comments": "Enable",
+    "IssueTracking": "Disable",
+    "GroupID": "29657931",
+    "Group" : "Market Warehouse",
+    "chats": "True",
+	"Enable_Dev_Stock_Manager" : "True",
+	"Game": "CSGO",
+	
+	
+	"BackGrounds" : "True",
+	"TradingCards": "True"
+	
+}
