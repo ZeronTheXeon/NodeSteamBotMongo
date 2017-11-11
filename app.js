@@ -50,16 +50,19 @@ const manager = new TradeOfferManager ({
 	language: 'en',
 });
 
+function timeStamp(x) {
 	var date = new Date();
 	var minute = date.getMinutes()
 	var second = date.getSeconds()
 	var hour = date.getHours()
-	var h = hour
-	var m = minute
-	var s = second
-	var timestamp = "[".green+colors.yellow(h)+":".cyan+colors.yellow(m)+":".cyan+colors.yellow(s)+"]".green
-	var RegTimestamp = "["+h+":"+m+":"+s+"]"
-	
+	var timestamp = "[".green + colors.yellow(hour) + ":".cyan + colors.yellow(minute) + ":".cyan + colors.yellow(second) + "]".green
+	var RegTimestamp = "[" + hour + ":" + minute + ":" + second + "]"
+	if (x === "normal") {
+		return RegTimestamp
+	} else if (x === "colored") {
+		return timestamp
+	}
+}
 	
 console.log("\x1b[8m SteamTrade Bot")
 console.log("\x1b[33m Current Version:\x1b[35m 2.5.0")
@@ -78,7 +81,7 @@ const logOnOptions = {
 client.logOn(logOnOptions);
 
 client.on('loggedOn', () => {
-    console.log('succesfully logged on.');
+    console.log(timeStamp("colored") + 'succesfully logged on.');
     client.setPersona(SteamUser.Steam.EPersonaState.Online,config.SteamName);
     client.gamesPlayed([Games.Game1,Games.Game2]);
 });
@@ -274,8 +277,8 @@ if (config.TradingCards == "True" || "true" || "Enable" || "enable"){
 function acceptOffer(offer) {
 	offer.accept((err) => {
 		community.checkConfirmations();
-		console.log(timestamp+"We Accepted an offer");
-		if (err) console.log(timestamp+"There was an error accepting the offer.");
+		console.log(timeStamp("colored") + "We Accepted an offer");
+		if (err) console.log(timeStamp("colored") + "There was an error accepting the offer.");
 	});
 
 }
@@ -324,14 +327,14 @@ function StockManagerOffer(offer){
 	
 }
 function declineOffer(offer) {
-		console.log(timestamp+"We Declined an offer");
+		console.log(timeStamp("colored") + "We Declined an offer");
 	offer.decline((err) => {
-		if (err) console.log(timestamp+"There was an error declining the offer.");
+		if (err) console.log(timeStamp("colored") + "There was an error declining the offer.");
 	});
 }
 function processOffer(offer){
 	if (offer.isGlitched() || offer.state === 11) {
-		console.log(timestap+"Offer was glitched, declining.");
+		console.log(timeStamp("colored") + "Offer was glitched, declining.");
 		declineOffer(offer);
 	} else if (offer.partner.getSteamID64() === config.ownerID) {
 		acceptOffer(offer);
@@ -394,7 +397,7 @@ function processOffer(offer){
 				filestockname = './/settings/Prices/SkinPrices.json';
 			}
 			if (fs.readFileSync(filestockname)){
-			console.log(timestamp+"Thier " +item+" - stock number: " +currentstock+ " / " +StockLimit+ ".")
+			console.log(timeStamp("colored") + "Thier " +item+" - stock number: " +currentstock+ " / " +StockLimit+ ".")
 			}
 			if (currentstock < StockLimit){
 				if(CurrencyPrices[item]) {
@@ -406,7 +409,7 @@ function processOffer(offer){
 					})
 				}
 			} else if (currentstock >= StockLimit){
-			console.log(timestamp+item +" Stock Limit Reached")
+			console.log(timeStamp("colored") + item +" Stock Limit Reached")
 				manager.on('receivedOfferChanged', (offer)=>{
 					community.postUserComment(offer.partner.toString(), item+ " Stock Limit Reached", (err)=>{
 					if(err) throw err.message
@@ -415,11 +418,14 @@ function processOffer(offer){
 			}				
 		}
 		
-		setTimeout(function(){console.log(timestamp+"Our value: "+ourValue)},2000)
-		setTimeout(function(){console.log(timestamp+"Their value: "+theirValue)},2000)
+		setTimeout(function(){console.log(timeStamp("colored") + "Our value: "+ourValue)},2000)
+		setTimeout(function(){console.log(timeStamp("colored") + "Their value: "+theirValue)},2000)
 		if(ourValue <= theirValue){
 			acceptOffer(offer)
 			StockManagerOffer(offer)
+		} else if (ourValue > theirValue) {
+			console.log(timeStamp("colored") + "Their value was different.")
+			declineOffer(offer);
 		}
 	}
 }
@@ -443,7 +449,7 @@ manager.on('receivedOfferChanged', (offer)=>{
 					if (community.postUserComment(offer.partner.toString(), math.pickRandom([Comments.comments0, Comments.comments1, Comments.comments2, Comments.comments3, Comments.comments4, Comments.comments5])), (err)=>{
 						if(err) throw err.message
 						}){
-							console.log(timestamp+"Commented on "+offer.partner.toString()+"'s Profile")
+							console.log(timeStamp("colored") + "Commented on "+offer.partner.toString()+"'s Profile")
 						}
 					}
 				};
