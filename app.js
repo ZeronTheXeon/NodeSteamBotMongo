@@ -329,7 +329,6 @@ function declineOffer(offer) {
 		if (err) console.log(timestamp+"There was an error declining the offer.");
 	});
 }
-
 function processOffer(offer){
 	if (offer.isGlitched() || offer.state === 11) {
 		console.log(timestap+"Offer was glitched, declining.");
@@ -364,14 +363,10 @@ function processOffer(offer){
 				if(CurrencyPrices[item]) {
 					ourValue += CurrencyPrices[item].sell;
 				} else if (SkinPrices[item]){
-					var names = [
-						item
-					];
 					market.getItemsPrice(730, item, function(data) {
-							console.log(data);
-							lowest_value = data.lowest_price.replace("$",'').trim();
-							ourValue += lowest_value
-					})
+						console.log(data);
+						ourValue += parseFloat(data[item].lowest_price.replace("$",'').trim());
+					})				
 				} else {
 					console.log(timestamp+"Invalid Value.");
 					ourValue += 99999;
@@ -406,29 +401,26 @@ function processOffer(offer){
 					theirValue += CurrencyPrices[item].buy;
 				} else if (SkinPrices[item]){
 					market.getItemsPrice(730, item, function(data) {
-							console.log(data);
-							lowest_value = data.lowest_price.replace("$",'').trim();
-							theirValue += lowest_value
+						console.log(data);
+						theirValue += parseFloat(data[item].lowest_price.replace("$",'').trim());
 					})
-				} else if (currentstock >= StockLimit){
-				console.log(timestamp+item +" Stock Limit Reached")
-					manager.on('receivedOfferChanged', (offer)=>{
-						community.postUserComment(offer.partner.toString(), item+ " Stock Limit Reached", (err)=>{
-						if(err) throw err.message
-						})
+				}
+			} else if (currentstock >= StockLimit){
+			console.log(timestamp+item +" Stock Limit Reached")
+				manager.on('receivedOfferChanged', (offer)=>{
+					community.postUserComment(offer.partner.toString(), item+ " Stock Limit Reached", (err)=>{
+					if(err) throw err.message
 					})
-				}				
-			}
+				})
+			}				
 		}
-	setTimeout(function(){console.log(timestamp+"Our value: "+ourValue)},2000)
-	setTimeout(function(){console.log(timestamp+"Their value: "+theirValue)},2000)
-		setTimeout(function(){if(ourValue <= theirValue){
+		
+		setTimeout(function(){console.log(timestamp+"Our value: "+ourValue)},2000)
+		setTimeout(function(){console.log(timestamp+"Their value: "+theirValue)},2000)
+		if(ourValue <= theirValue){
 			acceptOffer(offer)
 			StockManagerOffer(offer)
-		} else if (ourValue > theirValue) {
-			console.log(timestamp+"Their value was different.")
-			declineOffer(offer);
-		}}, 4000)
+		}
 	}
 }
 manager.on('receivedOfferChanged', (offer)=>{
