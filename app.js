@@ -360,7 +360,7 @@ function processOffer(offer){
 				filestockname = './/settings/Prices/SkinPrices.json';
 			}
 			if (fs.readFileSync(filestockname)){
-			console.log(timestamp+"Our " +item+" - stock number: " +currentstock+ " / " +StockLimit+ ".")
+			console.log(timeStamp("colored") + "Our " +item+" - stock number: " +currentstock+ " / " +StockLimit+ ".")
 			}
 			if (currentstock < StockLimit){
 				if(CurrencyPrices[item]) {
@@ -375,7 +375,7 @@ function processOffer(offer){
 					ourValue += 99999;
 				}
 			} else if (currentstock >= StockLimit){
-				console.log(timestamp+item +" Stock Limit Reached")
+				console.log(timeStamp("colored") + item +" Stock Limit Reached")
 				manager.on('receivedOfferChanged', (offer)=>{
 					if (adminConfig.disableAdminComments == "Enable") {
 						community.postUserComment(offer.partner.toString(), item+ " - Stock Limit Reached", (err)=>{
