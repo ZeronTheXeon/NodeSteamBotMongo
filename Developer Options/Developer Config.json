@@ -1,6 +1,4 @@
 {
-"Enable_Developer_Code" : "False",
-"Enable_Dev_Logs": "False"
-
-
+    "Enable_Developer_Code": "False",
+    "Enable_Dev_Logs": "False"
 }
