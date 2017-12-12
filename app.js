@@ -68,7 +68,7 @@ client.logOn(logOnOptions);
 
 client.on('loggedOn', () =>
 {
-    console.log(timeStamp("colored") + 'succesfully logged on.');
+    console.log(timeStamp(true) + 'succesfully logged on.');
     client.setPersona(SteamUser.Steam.EPersonaState.Online, config.SteamName);
     client.gamesPlayed([Games.Game1, Games.Game2]);
 });
@@ -94,230 +94,29 @@ client.on('webSession', (sessionid, cookies) =>
 
 client.on("friendMessage", function (steamID, message)
 {
-    if (message === "hi")
+    logToFile('.//Logs/Message.txt', "\r\n" + timeStamp() + "'" + steamID + "'" + message + "--");
+    message.toLowerCase();
+    let replyMessage = "Sorry, I don't know that command! Type !help for more info :)";
+    switch (message)
     {
-        client.chatMessage(steamID, messages.hi);
-        let saveMessage = messages.hi;
-        fs.readFile('.//Logs/Message.txt', "UTF8", function (err, data)
-        {
-            if (err) throw err;
-            fs.writeFile('.//Logs/Message.txt', data + "\r\n" + timeStamp("normal") + "'" + steamID + "'" + message + "--", (err) =>
-            {
-                if (err) throw err;
-            });
-        });
-        fs.readFile('.//Logs/Message.txt', "UTF8", function (err, data)
-        {
-            if (err) throw err;
-            fs.writeFile('.//Logs/Message.txt', data + "\r\n" + timeStamp() + saveMessage + "--", (err) =>
-            {
-                if (err) throw err;
-            });
-        });
+        case "hi": replyMessage = messages.hi; break;
+        case "!help": replyMessage = messages.help; break;
+        case "!group": replyMessage = messages.Group; break;
     }
-    if (message === "!help")
+    if (config.SpecialItems)
     {
-        client.chatMessage(steamID, messages.help);
-        let saveMessage = messages.help;
-        fs.readFile('.//Logs/Message.txt', "UTF8", function (err, data)
+        switch (message)
         {
-            if (err) throw err;
-            fs.writeFile('.//Logs/Message.txt', data + "\r\n" + timeStamp() + "'" + steamID + "'" + message + "--", (err) =>
-            {
-                if (err) throw err;
-            });
-        });
-        fs.readFile('.//Logs/Message.txt', "UTF8", function (err, data)
-        {
-            if (err) throw err;
-            fs.writeFile('.//Logs/Message.txt', data + "\r\n" + timeStamp() + saveMessage + "--", (err) =>
-            {
-                if (err) throw err;
-            });
-        });
-    }
-    if (message === "!Group")
-    {
-        client.chatMessage(steamID, messages.Group);
-        saveMessage = messages.Group;
-        fs.readFile('.//Logs/Message.txt', "UTF8", function (err, data)
-        {
-            if (err) throw err;
-            global_data = data;
-            fs.writeFile('.//Logs/Message.txt', global_data + "\r\n" + RegTimestamp + "'" + steamID + "'" + message + "--", (err) =>
-            {
-                if (err) throw err;
-            });
-        });
-        fs.readFile('.//Logs/Message.txt', "UTF8", function (err, data)
-        {
-            if (err) throw err;
-            global_data = data;
-            fs.writeFile('.//Logs/Message.txt', global_data + "\r\n" + RegTimestamp + saveMessage + "--", (err) =>
-            {
-                if (err) throw err;
-            });
-        });
-    }
-    //works
-    
-    if (config.TradingCards)
-    {
-        if (message === "!Buy Trading Cards")
-        {
-            client.chatMessage(steamID, messages.BuyCards);
-            saveMessage = messages.BuyCards;
-            fs.readFile('.//Logs/Message.txt', "UTF8", function (err, data)
-            {
-                if (err) throw err;
-                global_data = data;
-                fs.writeFile('.//Logs/Message.txt', global_data + "\r\n" + RegTimestamp + "'" + steamID + "'" + message + "--", (err) =>
-                {
-                    if (err) throw err;
-                });
-            });
-            fs.readFile('.//Logs/Message.txt', "UTF8", function (err, data)
-            {
-                if (err)
-                {
-                    throw err
-                }
-                ;
-                global_data = data;
-                fs.writeFile('.//Logs/Message.txt', global_data + "\r\n" + RegTimestamp + saveMessage + "--", (err) =>
-                {
-                    if (err) throw err;
-                });
-            });
-        }
-        if (message === "!Sell Trading Cards")
-        {
-            client.chatMessage(steamID, messages.SellCards);
-            saveMessage = messages.SellCards;
-            fs.readFile('.//Logs/Message.txt', "UTF8", function (err, data)
-            {
-                if (err)
-                {
-                    throw err
-                }
-                ;
-                global_data = data;
-                fs.writeFile('.//Logs/Message.txt', global_data + "\r\n" + RegTimestamp + "'" + steamID + "'" + message + "--", (err) =>
-                {
-                    if (err) throw err;
-                });
-            });
-            fs.readFile('.//Logs/Message.txt', "UTF8", function (err, data)
-            {
-                if (err)
-                {
-                    throw err
-                }
-                ;
-                global_data = data;
-                fs.writeFile('.//Logs/Message.txt', global_data + "\r\n" + RegTimestamp + saveMessage + "--", (err) =>
-                {
-                    if (err) throw err;
-                });
-            });
-        }
-        if (message === "!Buy Backgounds")
-        {
-            client.chatMessage(steamID, messages.BuyBackgrounds);
-            saveMessage = messages.BuyBackgrounds
-            fs.readFile('.//Logs/Message.txt', "UTF8", function (err, data)
-            {
-                if (err)
-                {
-                    throw err
-                }
-                ;
-                global_data = data;
-                fs.writeFile('.//Logs/Message.txt', global_data + "\r\n" + RegTimestamp + "'" + steamID + "'" + message + "--", (err) =>
-                {
-                    if (err) throw err;
-                });
-            });
-            fs.readFile('.//Logs/Message.txt', "UTF8", function (err, data)
-            {
-                if (err)
-                {
-                    throw err
-                }
-                ;
-                global_data = data;
-                fs.writeFile('.//Logs/Message.txt', global_data + "\r\n" + RegTimestamp + saveMessage + "--", (err) =>
-                {
-                    if (err) throw err;
-                });
-            });
-        }
-        if (message === "!Sell Backgrounds")
-        {
-            client.chatMessage(steamID, messages.SellBackgrounds);
-            saveMessage = messages.SellBackgrounds;
-            fs.readFile('.//Logs/Message.txt', "UTF8", function (err, data)
-            {
-                if (err) throw err;
-                fs.writeFile('.//Logs/Message.txt', data + "\r\n" + RegTimestamp + "'" + steamID + "'" + message + "--", (err) =>
-                {
-                    if (err) throw err;
-                });
-            });
-            fs.readFile('.//Logs/Message.txt', "UTF8", function (err, data)
-            {
-                if (err) throw err;
-                fs.writeFile('.//Logs/Message.txt', data + "\r\n" + RegTimestamp + saveMessage + "--", (err) =>
-                {
-                    if (err) throw err;
-                });
-            });
-        }
-        if (message === "!Buy Emoticons")
-        {
-            client.chatMessage(steamID, messages.BuyEmoticons);
-            saveMessage = messages.BuyEmoticons;
-            fs.readFile('.//Logs/Message.txt', "UTF8", function (err, data)
-            {
-                if (err) throw err;
-                global_data = data;
-                fs.writeFile('.//Logs/Message.txt', global_data + "\r\n" + timeStamp("normal") + "'" + steamID + "'" + message + "--", (err) =>
-                {
-                    if (err) throw err;
-                });
-            });
-            fs.readFile('.//Logs/Message.txt', "UTF8", function (err, data)
-            {
-                if (err) throw err;
-                fs.writeFile('.//Logs/Message.txt', data + "\r\n" + timeStamp("normal") + saveMessage + "--", (err) =>
-                {
-                    if (err) throw err;
-                });
-            });
-        }
-        if (message === "!Sell Emoticons")
-        {
-            client.chatMessage(steamID, messages.SellEmoticons);
-            saveMessage = messages.SellEmoticons;
-            fs.readFile('.//Logs/Message.txt', "UTF8", function (err, data)
-            {
-                if (err) throw err;
-                fs.writeFile('.//Logs/Message.txt', data + "\r\n" + timeStamp("normal") + "'" + steamID + "'" + message + "--", (err) =>
-                {
-                    if (err) throw err;
-                });
-            });
-            fs.readFile('.//Logs/Message.txt', "UTF8", function (err, data)
-            {
-                if (err) throw err;
-                global_data = data;
-                fs.writeFile('.//Logs/Message.txt', global_data + "\r\n" + RegTimestamp + saveMessage + "--", (err) =>
-                {
-                    if (err) throw err;
-                });
-            });
+            case "!buy trading cards": replyMessage = messages.BuyCards; break;
+            case "!sell trading cards": replyMessage = messages.SellCards; break;
+            case "!buy backgrounds": replyMessage = messages.BuyBackgrounds; break;
+            case "!sell backgrounds": replyMessage = messages.SellBackgrounds; break;
+            case "!buy emoticons": replyMessage = messages.BuyEmoticons; break;
+            case "!sell emoticons": replyMessage = messages.SellEmoticons; break;
         }
     }
+    client.chatMessage(steamID, replyMessage);
+    logToFile('./Logs/Message.txt', "\r\n" + timestamp + replyMessage + "--");
 });
 
 
@@ -326,8 +125,8 @@ function acceptOffer(offer)
     offer.accept((err) =>
     {
         community.checkConfirmations();
-        console.log(timeStamp("colored") + "We Accepted an offer");
-        if (err) console.log(timeStamp("colored") + "There was an error accepting the offer.");
+        console.log(timeStamp(true) + "We Accepted an offer");
+        if (err) console.log(timeStamp(true) + "There was an error accepting the offer.");
     });
     
 }
@@ -341,7 +140,7 @@ function StockManagerOffer(offer)
     let theirValue = 0;
     let currentstock = 0;
     let StockLimit = 0;
-    if (config.Enable_Dev_Stock_Manager === "True")
+    if (config.Enable_Dev_Stock_Manager)
     {
         for (let i in ourItems)
         {
@@ -391,10 +190,10 @@ function StockManagerOffer(offer)
 
 function declineOffer(offer)
 {
-    console.log(timeStamp("colored") + "We Declined an offer");
+    console.log(timeStamp(true) + "We Declined an offer");
     offer.decline((err) =>
     {
-        if (err) console.log(timeStamp("colored") + "There was an error declining the offer.");
+        if (err) console.log(timeStamp(true) + "There was an error declining the offer.");
     });
 }
 
@@ -402,10 +201,10 @@ function processOffer(offer)
 {
     if (offer.isGlitched() || offer.state === 11)
     {
-        console.log(timeStamp("colored") + "Offer was glitched, declining.");
+        console.log(timeStamp(true) + "Offer was glitched, declining.");
         declineOffer(offer);
     }
-    else if (offer.partner.getSteamID64() === config.ownerID)
+    else if (offer.partner.getSteamID64() === config.OwnerID)
     {
         acceptOffer(offer);
     }
@@ -437,7 +236,7 @@ function processOffer(offer)
             }
             if (fs.readFileSync(filestockname))
             {
-                console.log(timeStamp("colored") + "Our " + item + " - stock number: " + currentstock + " / " + StockLimit + ".")
+                console.log(timeStamp(true) + "Our " + item + " - stock number: " + currentstock + " / " + StockLimit + ".")
             }
             if (currentstock < StockLimit)
             {
@@ -461,7 +260,7 @@ function processOffer(offer)
             }
             else if (currentstock >= StockLimit)
             {
-                console.log(timeStamp("colored") + item + " Stock Limit Reached")
+                console.log(timeStamp(true) + item + " Stock Limit Reached");
                 manager.on('receivedOfferChanged', (offer) =>
                 {
                     if (adminConfig.disableAdminComments)
@@ -491,7 +290,7 @@ function processOffer(offer)
             }
             if (fs.readFileSync(filestockname))
             {
-                console.log(timeStamp("colored") + "Thier " + item + " - stock number: " + currentstock + " / " + StockLimit + ".")
+                console.log(timeStamp(true) + "Their " + item + " - stock number: " + currentstock + " / " + StockLimit + ".")
             }
             if (currentstock < StockLimit)
             {
@@ -510,7 +309,7 @@ function processOffer(offer)
             }
             else if (currentstock >= StockLimit)
             {
-                console.log(timeStamp("colored") + item + " Stock Limit Reached")
+                console.log(timeStamp(true) + item + " Stock Limit Reached")
                 manager.on('receivedOfferChanged', (offer) =>
                 {
                     community.postUserComment(offer.partner.toString(), item + " Stock Limit Reached", (err) =>
@@ -523,11 +322,11 @@ function processOffer(offer)
         
         setTimeout(function ()
         {
-            console.log(timeStamp("colored") + "Our value: " + ourValue)
+            console.log(timeStamp(true) + "Our value: " + ourValue)
         }, 2000);
         setTimeout(function ()
         {
-            console.log(timeStamp("colored") + "Their value: " + theirValue)
+            console.log(timeStamp(true) + "Their value: " + theirValue)
         }, 2000);
         if (ourValue <= theirValue)
         {
@@ -536,7 +335,7 @@ function processOffer(offer)
         }
         else if (ourValue > theirValue)
         {
-            console.log(timeStamp("colored") + "Their value was different.");
+            console.log(timeStamp(true) + "Their value was different.");
             declineOffer(offer);
         }
     }
@@ -572,13 +371,22 @@ manager.on('receivedOfferChanged', (offer) =>
                         if (err) throw err.message
                     })
                 {
-                    console.log(timeStamp("colored") + "Commented on " + partnerString + "'s Profile")
+                    console.log(timeStamp(true) + "Commented on " + partnerString + "'s Profile")
                 }
             }
         }
     }
 });
 
+function logToFile(file, str)
+{
+    fs.appendFile(file, str, (err) =>
+    {
+        if (err) throw err;
+    });
+}
+
+// TODO: Possibly remove \/
 client.setOption("promptSteamGuardCode", false);
 
 manager.on('newOffer', (offer) =>
