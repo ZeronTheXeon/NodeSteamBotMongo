@@ -57,5 +57,8 @@ typings/
 # dotenv environment variables file
 .env
 
+#IDE extras
+.idea
+
 # prevent showing passwords
 settings/config.json

@@ -3,6 +3,6 @@
   "Commentonownprofile": "True",
   "AdminChat": "True",
   "AdminPrices": "True",
-  "Comment": "True",
+  "Comment": true,
   "disableAdminComments": "True"
 }
