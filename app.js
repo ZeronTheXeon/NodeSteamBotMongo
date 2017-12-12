@@ -7,18 +7,15 @@ const SteamTotp = require('steam-totp');
 const SteamUser = require('steam-user');
 const SteamCommunity = require('steamcommunity');
 const TradeOfferManager = require('steam-tradeoffer-manager');
-const math = require('mathjs');
 const fs = require('fs');
-const colors = require('colors');
+// const colors = require('colors'); // Is supposedly used
 const jsonfile = require('jsonfile');
 const market = require('steam-market-pricing');
 
 const adminConfig = require('./AdminOptions/Config.json');
 const CreatorConfig = require('./CreatorProperties/Config.json');
-const Name = require('./settings/config.json');
 const Games = require('./settings/Games.json');
 const Comments = require('./settings/Comments/comments.json');
-const Game = require('./settings/Configuration/Game.js');
 
 
 const SkinPrices = require('./settings/Prices/SkinPrices.json');
@@ -50,7 +47,7 @@ function timeStamp(x)
     const minute = date.getMinutes();
     const second = date.getSeconds();
     const hour = date.getHours();
-    if (x) return ("[".green + colors.yellow(hour) + ":".cyan + colors.yellow(minute) + ":".cyan + colors.yellow(second) + "]".green);
+    if (x) return ("[".green + hour.yellow + ":".cyan + minute.yellow + ":".cyan + second.yellow + "]".green);
     else return ("[" + hour + ":" + minute + ":" + second + "]");
 }
 
@@ -68,7 +65,7 @@ client.logOn(logOnOptions);
 
 client.on('loggedOn', () =>
 {
-    console.log(timeStamp(true) + 'succesfully logged on.');
+    console.log(timeStamp(true) + 'successfully logged on.');
     client.setPersona(SteamUser.Steam.EPersonaState.Online, config.SteamName);
     client.gamesPlayed([Games.Game1, Games.Game2]);
 });
@@ -94,29 +91,47 @@ client.on('webSession', (sessionid, cookies) =>
 
 client.on("friendMessage", function (steamID, message)
 {
-    logToFile('.//Logs/Message.txt', "\r\n" + timeStamp() + "'" + steamID + "'" + message + "--");
+    logToFile('.//Logs/Message.log', "\r\n" + timeStamp() + "'" + steamID + "'" + message + "--");
     message.toLowerCase();
     let replyMessage = "Sorry, I don't know that command! Type !help for more info :)";
     switch (message)
     {
-        case "hi": replyMessage = messages.hi; break;
-        case "!help": replyMessage = messages.help; break;
-        case "!group": replyMessage = messages.Group; break;
+        case "hi":
+            replyMessage = messages.hi;
+            break;
+        case "!help":
+            replyMessage = messages.help;
+            break;
+        case "!group":
+            replyMessage = messages.Group;
+            break;
     }
     if (config.SpecialItems)
     {
         switch (message)
         {
-            case "!buy trading cards": replyMessage = messages.BuyCards; break;
-            case "!sell trading cards": replyMessage = messages.SellCards; break;
-            case "!buy backgrounds": replyMessage = messages.BuyBackgrounds; break;
-            case "!sell backgrounds": replyMessage = messages.SellBackgrounds; break;
-            case "!buy emoticons": replyMessage = messages.BuyEmoticons; break;
-            case "!sell emoticons": replyMessage = messages.SellEmoticons; break;
+            case "!buy trading cards":
+                replyMessage = messages.BuyCards;
+                break;
+            case "!sell trading cards":
+                replyMessage = messages.SellCards;
+                break;
+            case "!buy backgrounds":
+                replyMessage = messages.BuyBackgrounds;
+                break;
+            case "!sell backgrounds":
+                replyMessage = messages.SellBackgrounds;
+                break;
+            case "!buy emoticons":
+                replyMessage = messages.BuyEmoticons;
+                break;
+            case "!sell emoticons":
+                replyMessage = messages.SellEmoticons;
+                break;
         }
     }
     client.chatMessage(steamID, replyMessage);
-    logToFile('./Logs/Message.txt', "\r\n" + timestamp + replyMessage + "--");
+    logToFile('./Logs/Message.log', "\r\n" + timestamp + replyMessage + "--");
 });
 
 
@@ -153,7 +168,7 @@ function StockManagerOffer(offer)
                     if (err) throw err;
                     console.log('File read');
                     console.log('writing to ' + filestockname);
-                    filestock[item].instock = math.subtract(currentstock, 1);
+                    filestock[item].instock = currentstock--;
                     fs.writeFile(filestockname, JSON.stringify(filestock, null, 2), function (err)
                     {
                         if (err) return console.log(err);
@@ -173,7 +188,7 @@ function StockManagerOffer(offer)
                     if (err) throw err;
                     console.log('File read');
                     console.log('writing to ' + processOffer.filestockname);
-                    processOffer.filestock[item].instock = math.add(processOffer.currentstock, 1)
+                    processOffer.filestock[item].instock = processOffer.currentstock++;
                     fs.writeFile(filestockname, JSON.stringify(processOffer.filestock, null, 2), function (err)
                     {
                         if (err) return console.log(err);
@@ -190,7 +205,7 @@ function StockManagerOffer(offer)
 
 function declineOffer(offer)
 {
-    console.log(timeStamp(true) + "We Declined an offer");
+    console.log(timeStamp(true) + "We declined an offer.");
     offer.decline((err) =>
     {
         if (err) console.log(timeStamp(true) + "There was an error declining the offer.");
@@ -346,9 +361,9 @@ manager.on('receivedOfferChanged', (offer) =>
     let partnerString = offer.partner.toString();
     if (offer.state === 7 && community.postUserComment(partnerString))
     {
-        if (community.postUserComment(partnerString, "Your trade value was different"), (err) =>
+        if (community.postUserComment(partnerString, "Your trade value was different, sorry!"), (err) =>
             {
-                if (err) throw err.message
+                if (err) throw err.message;
             })
         {
             console.log("Commented on " + partnerString + "'s Profile")
@@ -366,7 +381,7 @@ manager.on('receivedOfferChanged', (offer) =>
         {
             if (community.postUserComment(partnerString))
             {
-                if (community.postUserComment(partnerString, math.pickRandom(Comments)), (err) =>
+                if (community.postUserComment(partnerString, Comments[Math.floor(Math.random() * Comments.comments.length)]), (err) =>
                     {
                         if (err) throw err.message
                     })

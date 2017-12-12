@@ -1,13 +1,12 @@
 {
   "name": "node-steambot-mongo",
   "version": "0.0.1",
-  "description": "1. Unpack the files to your Desktop or where ever you want it",
+  "description": "Open-sourced bots for usage with a website, storing info in Mongo docs.",
   "main": "app.js",
   "dependencies": {
     "colors": "^1.1.2",
     "fs": "^0.0.1-security",
     "jsonfile": "^4.0.0",
-    "mathjs": "^3.17.0",
     "steam-market-pricing": "^1.0.4",
     "steam-totp": "^2.0.1",
     "steam-tradeoffer-manager": "^2.9.2",
