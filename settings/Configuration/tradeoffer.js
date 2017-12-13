@@ -24,8 +24,8 @@ function declineOffer(offer) {
 
 function Manager(offer) {
 	if (config.Enable_Dev_Stock_Manager) {
-		for (var i in processOffer.ourItems) {
-			var item = processOffer.ourItems[i].market_name;
+		for (let i in processOffer.ourItems) {
+			let item = processOffer.ourItems[i].market_name;
 			if (processOffer.filestock[item]) {
 				currentstock = processOffer.filestock[item].instock;
 				fs.readFile(filestockname, (err, data) => {
@@ -170,7 +170,7 @@ manager.on('receivedOfferChanged', (offer) => {
 		}
 	}
 	if (offer.state === 3 && config.Comment) {
-		if (adminConfig.disableAdminComments == "Enable") {
+		if (adminConfig.disableAdminComments) {
 			if (offer.partner.toString() === CreatorConfig.CreatorID) {
 			}
 		} else {

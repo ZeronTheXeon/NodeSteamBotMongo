@@ -8,31 +8,21 @@ const SteamUser = require('steam-user');
 const SteamCommunity = require('steamcommunity');
 const TradeOfferManager = require('steam-tradeoffer-manager');
 const fs = require('fs');
-// const colors = require('colors'); // Is supposedly used
+const colors = require('colors'); // Is supposedly used
 const jsonfile = require('jsonfile');
 const market = require('steam-market-pricing');
 
 const adminConfig = require('./AdminOptions/Config.json');
-const CreatorConfig = require('./CreatorProperties/Config.json');
-const Games = require('./settings/Games.json');
-const Comments = require('./settings/Comments/comments.json');
-
+const creatorConfig = require('./CreatorProperties/Config.json');
+const gameConfig = require('./settings/games.json');
+const commentConfig = require('./settings/Comments/comments.json');
+const messageConfig = require('./settings/Messages/messages.json');
 
 const SkinPrices = require('./settings/Prices/SkinPrices.json');
 const CurrencyPrices = require('./settings/Prices/Currency Prices.json');
 
-
-const AdminCurrency = require('./AdminOptions/Prices/AdminCurrencyPrices.json');
-const AdminCard = require('./AdminOptions/Prices/Admin_Card_Prices.json');
-const AdminEmoticon = require('./AdminOptions/Prices/Admin_Emotes_Prices.json');
-const AdminBackground = require('./AdminOptions/Prices/Admin_Backgrounds_Prices.json');
-
-
-const messages = require('./settings/Messages/messages.json');
-
 const TradeLog = require('./Logs/Trade.log');
 
-const SteamID = TradeOfferManager.SteamID;
 const client = new SteamUser();
 const community = new SteamCommunity();
 const manager = new TradeOfferManager({
@@ -54,6 +44,7 @@ function timeStamp(x)
 console.log("\x1b[8m SteamTrade Bot");
 console.log("\x1b[33m Current Version:\x1b[35m 0.0.1");
 console.log("\x1b[33mForked from:\x1b[35m https://github.com/Lonster_Monster\n\n");
+console.log(timeStamp(true) + " This is a test of colors :)");
 
 const logOnOptions = {
     accountName: config.username,
@@ -65,9 +56,9 @@ client.logOn(logOnOptions);
 
 client.on('loggedOn', () =>
 {
-    console.log(timeStamp(true) + 'successfully logged on.');
+    console.log(timeStamp(true) + ' successfully logged on.');
     client.setPersona(SteamUser.Steam.EPersonaState.Online, config.SteamName);
-    client.gamesPlayed([Games.Game1, Games.Game2]);
+    client.gamesPlayed(gameConfig.games.randItem());
 });
 
 
@@ -76,11 +67,10 @@ client.on('friendRelationship', (steamID, relationship) =>
     if (relationship === 2)
     {
         client.addFriend(steamID);
-        client.chatMessage(steamID, messages.WELCOME);
-        client.chatMessage(steamID, messages.WELCOME2);
+        client.chatMessage(steamID, messageConfig.WELCOME);
+        client.chatMessage(steamID, messageConfig.WELCOME2);
     }
 });
-
 
 client.on('webSession', (sessionid, cookies) =>
 {
@@ -97,13 +87,13 @@ client.on("friendMessage", function (steamID, message)
     switch (message)
     {
         case "hi":
-            replyMessage = messages.hi;
+            replyMessage = messageConfig.hi;
             break;
         case "!help":
-            replyMessage = messages.help;
+            replyMessage = messageConfig.help;
             break;
         case "!group":
-            replyMessage = messages.Group;
+            replyMessage = messageConfig.Group;
             break;
     }
     if (config.SpecialItems)
@@ -111,41 +101,38 @@ client.on("friendMessage", function (steamID, message)
         switch (message)
         {
             case "!buy trading cards":
-                replyMessage = messages.BuyCards;
+                replyMessage = messageConfig.BuyCards;
                 break;
             case "!sell trading cards":
-                replyMessage = messages.SellCards;
+                replyMessage = messageConfig.SellCards;
                 break;
             case "!buy backgrounds":
-                replyMessage = messages.BuyBackgrounds;
+                replyMessage = messageConfig.BuyBackgrounds;
                 break;
             case "!sell backgrounds":
-                replyMessage = messages.SellBackgrounds;
+                replyMessage = messageConfig.SellBackgrounds;
                 break;
             case "!buy emoticons":
-                replyMessage = messages.BuyEmoticons;
+                replyMessage = messageConfig.BuyEmoticons;
                 break;
             case "!sell emoticons":
-                replyMessage = messages.SellEmoticons;
+                replyMessage = messageConfig.SellEmoticons;
                 break;
         }
     }
     client.chatMessage(steamID, replyMessage);
-    logToFile('./Logs/Message.log', "\r\n" + timestamp + replyMessage + "--");
+    logToFile('./Logs/Message.log', "\r\n" + timeStamp() + replyMessage + "--");
 });
-
 
 function acceptOffer(offer)
 {
     offer.accept((err) =>
     {
         community.checkConfirmations();
-        console.log(timeStamp(true) + "We Accepted an offer");
-        if (err) console.log(timeStamp(true) + "There was an error accepting the offer.");
+        console.log(timeStamp(true) + " We Accepted an offer");
+        if (err) console.log(timeStamp(true) + " There was an error accepting the offer.");
     });
-    
 }
-
 
 function StockManagerOffer(offer)
 {
@@ -269,7 +256,7 @@ function processOffer(offer)
                 }
                 else
                 {
-                    console.log(timestamp + "Invalid Value.");
+                    console.log(timestamp() + "Invalid Value.");
                     ourValue += 99999;
                 }
             }
@@ -373,7 +360,7 @@ manager.on('receivedOfferChanged', (offer) =>
     {
         if (adminConfig.disableAdminComments)
         {
-            if (partnerString === CreatorConfig.CreatorID)
+            if (partnerString === creatorConfig.CreatorID)
             {
             }
         }
@@ -381,9 +368,9 @@ manager.on('receivedOfferChanged', (offer) =>
         {
             if (community.postUserComment(partnerString))
             {
-                if (community.postUserComment(partnerString, Comments[Math.floor(Math.random() * Comments.comments.length)]), (err) =>
+                if (community.postUserComment(partnerString, commentConfig.comments.randItem()), (err) =>
                     {
-                        if (err) throw err.message
+                        if (err) throw err.message;
                     })
                 {
                     console.log(timeStamp(true) + "Commented on " + partnerString + "'s Profile")
@@ -400,6 +387,25 @@ function logToFile(file, str)
         if (err) throw err;
     });
 }
+
+Array.prototype.randItem = function ()
+{
+    if (this.length === 0) return null;
+    return this[Math.floor(Math.random() * this.length)];
+};
+
+Array.prototype.randItemDiff = function (last)
+{
+    if (this.length === 0) return null;
+    else if (this.length === 1) return this[0];
+    else
+    {
+        let item = null;
+        do item = this.randItem();
+        while (item === last);
+        return item;
+    }
+};
 
 // TODO: Possibly remove \/
 client.setOption("promptSteamGuardCode", false);

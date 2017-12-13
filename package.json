@@ -16,7 +16,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "npm start"
+    "test": "node app.js"
   },
   "author": "TheXeon / LonsterMonster",
   "license": "ISC",
