@@ -1,34 +1,58 @@
 {
   "MP9 | Sand Dashed (Battle-Scarred)": {
     "instock": 0,
-    "stocklimit": 10
+    "stocklimit": 10,
+    "buy": 1.0,
+    "sell": 2.0,
+    "type": "csgoskin"
   },
   "MP9 | Sand Dashed (Field-Tested)": {
     "instock": 0,
-    "stocklimit": 10
+    "stocklimit": 10,
+    "buy": 1.0,
+    "sell": 2.0,
+    "type": "csgoskin"
   },
   "MP9 | Sand Dashed (Well-Worn)": {
     "instock": 0,
-    "stocklimit": 10
+    "stocklimit": 10,
+    "buy": 1.0,
+    "sell": 2.0,
+    "type": "csgoskin"
   },
   "MP9 | Sand Dashed (Minimal Wear)": {
     "instock": 0,
-    "stocklimit": 10
+    "stocklimit": 10,
+    "buy": 1.0,
+    "sell": 2.0,
+    "type": "csgoskin"
   },
   "MP9 | Sand Dashed (Factory New)": {
     "instock": 0,
-    "stocklimit": 10
+    "stocklimit": 10,
+    "buy": 1.0,
+    "sell": 2.0,
+    "type": "csgoskin"
   },
   "PP-Bizon | Sand Dashed (Field-Tested)": {
     "instock": 0,
-    "stocklimit": 10
+    "stocklimit": 10,
+    "buy": 1.0,
+    "sell": 2.0,
+    "type": "csgoskin"
   },
   "SCAR-20 | Sand Mesh (Battle-Scarred)": {
     "instock": 0,
-    "stocklimit": 10
+    "stocklimit": 10,
+    "buy": 1.0,
+    "sell": 2.0,
+    "type": "csgoskin"
   },
   "PP-Bizon | Night Ops(Field-Tested)": {
     "instock": 0,
-    "stocklimit": 10
+    "stocklimit": 10,
+    "buy": 1.0,
+    "sell": 2.0,
+    "type": "csgoskin"
   }
 }

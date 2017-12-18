@@ -18,8 +18,8 @@ const gameConfig = require('./settings/games.json');
 const commentConfig = require('./settings/Comments/comments.json');
 const messageConfig = require('./settings/Messages/messages.json');
 
-const SkinPrices = require('./settings/Prices/SkinPrices.json');
-const CurrencyPrices = require('./settings/Prices/Currency Prices.json');
+const pricesFileName = './settings/Prices/Prices.json';
+const PlayerSetPrices = require(pricesFileName);
 
 const TradeLog = require('./Logs/Trade.log');
 
@@ -30,16 +30,6 @@ const manager = new TradeOfferManager({
     community: community,
     language: 'en',
 });
-
-function timeStamp(x)
-{
-    const date = new Date();
-    const minute = date.getMinutes();
-    const second = date.getSeconds();
-    const hour = date.getHours();
-    if (x) return ("[".green + hour.yellow + ":".cyan + minute.yellow + ":".cyan + second.yellow + "]".green);
-    else return ("[" + hour + ":" + minute + ":" + second + "]");
-}
 
 console.log("\x1b[8m SteamTrade Bot");
 console.log("\x1b[33m Current Version:\x1b[35m 0.0.1");
@@ -81,7 +71,7 @@ client.on('webSession', (sessionid, cookies) =>
 
 client.on("friendMessage", function (steamID, message)
 {
-    logToFile('.//Logs/Message.log', "\r\n" + timeStamp() + "'" + steamID + "'" + message + "--");
+    logToFile('./Logs/Message.log', "\r\n" + timeStamp() + "'" + steamID + "'" + message + "--");
     message.toLowerCase();
     let replyMessage = "Sorry, I don't know that command! Type !help for more info :)";
     switch (message)
@@ -129,8 +119,8 @@ function acceptOffer(offer)
     offer.accept((err) =>
     {
         community.checkConfirmations();
-        console.log(timeStamp(true) + " We Accepted an offer");
         if (err) console.log(timeStamp(true) + " There was an error accepting the offer.");
+        else console.log(timeStamp(true) + " We Accepted an offer");
     });
 }
 
@@ -203,64 +193,67 @@ function processOffer(offer)
 {
     if (offer.isGlitched() || offer.state === 11)
     {
-        console.log(timeStamp(true) + "Offer was glitched, declining.");
+        console.log(timeStamp(true) + " Offer was glitched, declining.");
         declineOffer(offer);
     }
     else if (offer.partner.getSteamID64() === config.OwnerID)
     {
+        for (let i in ourItems)
+        {
+        
+        }
         acceptOffer(offer);
+        // TODO: retake stock here to prevent stock issues
     }
     else
     {
         let ourItems = offer.itemsToGive;
         let theirItems = offer.itemsToReceive;
+        let itemType = 'basictype';
         let ourValue = 0;
         let theirValue = 0;
-        let currentstock = 0;
-        let StockLimit = 0;
-        let DataValue = 0;
-        let filestockname = './/settings/Prices/DefaultPrice.json';
-        let filestock = require(filestockname);
+        let currentStock = 0;
+        let stockLimit = 0;
+        let sellPrice = 0;
+        let buyPrice = 0;
+        let dataValue = 0;
         for (let i in ourItems)
         {
             let item = ourItems[i].market_hash_name;
-            if (CurrencyPrices[item])
+            if (PlayerSetPrices[item])
             {
-                currentstock = CurrencyPrices[item].instock;
-                StockLimit = CurrencyPrices[item].stocklimit;
-                filestockname = './/settings/Prices/Currency Prices.json';
+                currentStock = PlayerSetPrices[item].currentstock;
+                stockLimit = PlayerSetPrices[item].stocklimit;
+                itemType = PlayerSetPrices[item].type;
+                sellPrice = PlayerSetPrices[item].sell;
+                buyPrice = PlayerSetPrices[item].buy;
+            } // TODO: Add check if not in file
+            if (fs.readFile(pricesFileName))
+            {
+                console.log(timeStamp(true) + " Our " + item + " - stock number: " + currentStock + " / " + stockLimit + ".")
             }
-            else if (SkinPrices[item])
+            if (currentStock < stockLimit)
             {
-                currentstock = SkinPrices[item].instock;
-                StockLimit = SkinPrices[item].stocklimit;
-                filestockname = './/settings/Prices/SkinPrices.json';
-            }
-            if (fs.readFileSync(filestockname))
-            {
-                console.log(timeStamp(true) + "Our " + item + " - stock number: " + currentstock + " / " + StockLimit + ".")
-            }
-            if (currentstock < StockLimit)
-            {
-                if (CurrencyPrices[item])
+                switch (itemType)
                 {
-                    ourValue += CurrencyPrices[item].sell;
-                }
-                else if (SkinPrices[item])
-                {
-                    market.getItemsPrice(730, item, function (data)
-                    {
-                        console.log(data);
-                        ourValue += parseFloat(data[item].lowest_price.replace("$", '').trim());
-                    })
-                }
-                else
-                {
-                    console.log(timestamp() + "Invalid Value.");
-                    ourValue += 99999;
+                    case "csgocurrency":
+                        ourValue += sellPrice;
+                        break;
+                    case "csgoskin":
+                        market.getItemsPrice(730, item, function (data)
+                        {
+                            console.log(data);
+                            ourValue += parseFloat(data[item].lowest_price.replace("$", '').trim());
+                        });
+                        break;
+                    default:
+                        //TODO Get backpack.tf price from here
+                        console.log(timestamp() + " Invalid Value.");
+                        ourValue += 99999;
+                        break;
                 }
             }
-            else if (currentstock >= StockLimit)
+            else if (currentStock >= stockLimit)
             {
                 console.log(timeStamp(true) + item + " Stock Limit Reached");
                 manager.on('receivedOfferChanged', (offer) =>
@@ -269,7 +262,7 @@ function processOffer(offer)
                     {
                         community.postUserComment(offer.partner.toString(), item + " - Stock Limit Reached", (err) =>
                         {
-                            if (err) throw err.message
+                            if (err) throw err.message;
                         });
                     }
                 })
@@ -278,66 +271,68 @@ function processOffer(offer)
         for (let i in theirItems)
         {
             let item = theirItems[i].market_hash_name;
-            if (CurrencyPrices[item])
+            if (PlayerSetPrices[item])
             {
-                currentstock = CurrencyPrices[item].instock;
-                StockLimit = CurrencyPrices[item].stocklimit;
-                filestockname = './/settings/Prices/Currency Prices.json';
+                currentStock = PlayerSetPrices[item].currentstock;
+                stockLimit = PlayerSetPrices[item].stocklimit;
+                itemType = PlayerSetPrices[item].type;
+                sellPrice = PlayerSetPrices[item].sell;
+                buyPrice = PlayerSetPrices[item].buy;
+            } // TODO: Add check if not in file
+            if (fs.readFileSync(pricesFileName))
+            {
+                console.log(timeStamp(true) + " Their " + item + " - stock number: " + currentStock + " / " + stockLimit + ".")
             }
-            else if (SkinPrices[item])
+            if (currentStock < stockLimit)
             {
-                currentstock = SkinPrices[item].instock;
-                StockLimit = SkinPrices[item].stocklimit;
-                filestockname = './/settings/Prices/SkinPrices.json';
-            }
-            if (fs.readFileSync(filestockname))
-            {
-                console.log(timeStamp(true) + "Their " + item + " - stock number: " + currentstock + " / " + StockLimit + ".")
-            }
-            if (currentstock < StockLimit)
-            {
-                if (CurrencyPrices[item])
+                switch (itemType)
                 {
-                    theirValue += CurrencyPrices[item].buy;
-                }
-                else if (SkinPrices[item])
-                {
-                    market.getItemsPrice(730, item, function (data)
-                    {
-                        console.log(data);
-                        theirValue += parseFloat(data[item].lowest_price.replace("$", '').trim());
-                    })
+                    case "csgocurrency":
+                        theirValue += buyPrice;
+                        break;
+                    case "csgoskin":
+                        market.getItemsPrice(730, item, function (data)
+                        {
+                            console.log(data);
+                            theirValue += parseFloat(data[item].lowest_price.replace("$", '').trim());
+                        });
+                        break;
+                    default:
+                        //TODO Get backpack.tf price from here
+                        console.log(timestamp() + " Invalid Value.");
+                        theirValue += 99999;
+                        break;
                 }
             }
-            else if (currentstock >= StockLimit)
+            else if (currentStock >= stockLimit)
             {
-                console.log(timeStamp(true) + item + " Stock Limit Reached")
+                console.log(timeStamp(true) + item + " Stock Limit Reached");
                 manager.on('receivedOfferChanged', (offer) =>
                 {
-                    community.postUserComment(offer.partner.toString(), item + " Stock Limit Reached", (err) =>
+                    community.postUserComment(offer.partner.toString(), item + " has reached stock limit!", (err) =>
                     {
-                        if (err) throw err.message
-                    })
-                })
+                        if (err) throw err.message;
+                    });
+                });
             }
-        }
+        } // end for in theirItems
         
         setTimeout(function ()
         {
-            console.log(timeStamp(true) + "Our value: " + ourValue)
+            console.log(timeStamp(true) + " Our value: " + ourValue);
         }, 2000);
         setTimeout(function ()
         {
-            console.log(timeStamp(true) + "Their value: " + theirValue)
+            console.log(timeStamp(true) + " Their value: " + theirValue);
         }, 2000);
         if (ourValue <= theirValue)
         {
             acceptOffer(offer);
-            StockManagerOffer(offer)
+            StockManagerOffer(offer);
         }
         else if (ourValue > theirValue)
         {
-            console.log(timeStamp(true) + "Their value was different.");
+            console.log(timeStamp(true) + " Their value was different.");
             declineOffer(offer);
         }
     }
@@ -386,6 +381,16 @@ function logToFile(file, str)
     {
         if (err) throw err;
     });
+}
+
+function timeStamp(x)
+{
+    const date = new Date();
+    const minute = date.getMinutes();
+    const second = date.getSeconds();
+    const hour = date.getHours();
+    if (x) return ("[".green + hour.yellow + ":".cyan + minute.yellow + ":".cyan + second.yellow + "]".green);
+    else return ("[" + hour + ":" + minute + ":" + second + "]");
 }
 
 Array.prototype.randItem = function ()

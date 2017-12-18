@@ -2,264 +2,308 @@
   "SCOUT (Trading Card)": {
     "buy": 2,
     "stocklimit": 100,
-    "instock": 0
+    "instock": 0,
+    "type": "tradingcard"
   },
   "HEAVY (Trading Card)": {
     "buy": 2,
     "sell": 3,
     "instock": 0,
-    "stocklimit": 100
+    "stocklimit": 100,
+    "type": "tradingcard"
   },
   "MEDIC (Trading Card)": {
     "buy": 2,
     "sell": 3,
     "instock": 0,
-    "stocklimit": 100
+    "stocklimit": 100,
+    "type": "tradingcard"
   },
   "SNIPER (Trading Card)": {
     "buy": 2,
     "sell": 3,
     "instock": 0,
-    "stocklimit": 100
+    "stocklimit": 100,
+    "type": "tradingcard"
   },
   "PYRO (Trading Card)": {
     "buy": 2,
     "sell": 3,
     "instock": 0,
-    "stocklimit": 100
+    "stocklimit": 100,
+    "type": "tradingcard"
   },
   "SOLDIER (Trading Card)": {
     "buy": 2,
     "sell": 3,
     "instock": 0,
-    "stocklimit": 100
+    "stocklimit": 100,
+    "type": "tradingcard"
   },
   "DEMOMAN (Trading Card)": {
     "buy": 2,
     "sell": 3,
     "instock": 0,
-    "stocklimit": 100
+    "stocklimit": 100,
+    "type": "tradingcard"
   },
   "ENGINEER (Trading Card)": {
     "buy": 2,
     "sell": 3,
     "instock": 0,
-    "stocklimit": 100
+    "stocklimit": 100,
+    "type": "tradingcard"
   },
   "SPY (Trading Card)": {
     "buy": 2,
     "sell": 3,
     "instock": 0,
-    "stocklimit": 100
+    "stocklimit": 100,
+    "type": "tradingcard"
   },
   "SCOUT (Foil Trading Card)": {
     "buy": 2,
     "sell": 3,
     "instock": 0,
-    "stocklimit": 100
+    "stocklimit": 100,
+    "type": "tradingcard"
   },
   "HEAVY (Foil Trading Card)": {
     "buy": 2,
     "sell": 3,
     "instock": 0,
-    "stocklimit": 100
+    "stocklimit": 100,
+    "type": "tradingcard"
   },
   "MEDIC (Foil Trading Card)": {
     "buy": 2,
     "sell": 3,
     "instock": 0,
-    "stocklimit": 100
+    "stocklimit": 100,
+    "type": "tradingcard"
   },
   "SNIPER (Foil Trading Card)": {
     "buy": 2,
     "sell": 3,
     "instock": 0,
-    "stocklimit": 100
+    "stocklimit": 100,
+    "type": "tradingcard"
   },
   "PYRO (Foil Trading Card)": {
     "buy": 2,
     "sell": 3,
     "instock": 0,
-    "stocklimit": 100
+    "stocklimit": 100,
+    "type": "tradingcard"
   },
   "SOLDIER (Foil Trading Card)": {
     "buy": 2,
     "sell": 3,
     "instock": 0,
-    "stocklimit": 100
+    "stocklimit": 100,
+    "type": "tradingcard"
   },
   "DEMOMAN (Foil Trading Card)": {
     "buy": 2,
     "sell": 3,
     "instock": 0,
-    "stocklimit": 100
+    "stocklimit": 100,
+    "type": "tradingcard"
   },
   "ENGINEER (Foil Trading Card)": {
     "buy": 2,
     "sell": 3,
     "instock": 0,
-    "stocklimit": 100
+    "stocklimit": 100,
+    "type": "tradingcard"
   },
   "SPY (Foil Trading Card)": {
     "buy": 2,
     "sell": 3,
     "instock": 0,
-    "stocklimit": 100
+    "stocklimit": 100,
+    "type": "tradingcard"
   },
   "Bounty Hunter": {
     "buy": 2,
     "sell": 3,
     "instock": 0,
-    "stocklimit": 100
+    "stocklimit": 100,
+    "type": "tradingcard"
   },
   "Vengeful Spirit": {
     "buy": 2,
     "sell": 3,
     "instock": 0,
-    "stocklimit": 100
+    "stocklimit": 100,
+    "type": "tradingcard"
   },
   "Tidehunter (Trading Card)": {
     "buy": 2,
     "sell": 3,
     "instock": 0,
-    "stocklimit": 100
+    "stocklimit": 100,
+    "type": "tradingcard"
   },
   "Razor": {
     "buy": 2,
     "sell": 3,
     "instock": 0,
-    "stocklimit": 100
+    "stocklimit": 100,
+    "type": "tradingcard"
   },
   "Riki": {
     "buy": 2,
     "sell": 3,
     "instock": 0,
-    "stocklimit": 100
+    "stocklimit": 100,
+    "type": "tradingcard"
   },
   "Tiny": {
     "buy": 2,
     "sell": 3,
     "instock": 0,
-    "stocklimit": 100
+    "stocklimit": 100,
+    "type": "tradingcard"
   },
   "Tusk": {
     "buy": 2,
     "sell": 3,
     "instock": 0,
-    "stocklimit": 100
+    "stocklimit": 100,
+    "type": "tradingcard"
   },
   "Phantom Lancer": {
     "buy": 2,
     "sell": 3,
     "instock": 0,
-    "stocklimit": 100
+    "stocklimit": 100,
+    "type": "tradingcard"
   },
   "Bounty Hunter (Foil)": {
     "buy": 2,
     "sell": 3,
     "instock": 0,
-    "stocklimit": 100
+    "stocklimit": 100,
+    "type": "tradingcard"
   },
   "Vengeful Spirit (Foil)": {
     "buy": 2,
     "sell": 3,
     "instock": 0,
-    "stocklimit": 100
+    "stocklimit": 100,
+    "type": "tradingcard"
   },
   "Tidehunter (Foil Trading Card)": {
     "buy": 2,
     "sell": 3,
     "instock": 0,
-    "stocklimit": 100
+    "stocklimit": 100,
+    "type": "tradingcard"
   },
   "Razor (Foil)": {
     "buy": 2,
     "sell": 3,
     "instock": 0,
-    "stocklimit": 100
+    "stocklimit": 100,
+    "type": "tradingcard"
   },
   "Riki (Foil)": {
     "buy": 2,
     "sell": 3,
     "instock": 0,
-    "stocklimit": 100
+    "stocklimit": 100,
+    "type": "tradingcard"
   },
   "Tiny (Foil)": {
     "buy": 2,
     "sell": 3,
     "instock": 0,
-    "stocklimit": 100
+    "stocklimit": 100,
+    "type": "tradingcard"
   },
   "Tusk (Foil)": {
     "buy": 2,
     "sell": 3,
     "instock": 0,
-    "stocklimit": 100
+    "stocklimit": 100,
+    "type": "tradingcard"
   },
   "Phantom Lancer (Foil)": {
     "buy": 2,
     "sell": 3,
     "instock": 0,
-    "stocklimit": 100
+    "stocklimit": 100,
+    "type": "tradingcard"
   },
   "Anarchist (Foil)": {
     "buy": 2,
     "sell": 3,
     "instock": 0,
-    "stocklimit": 100
+    "stocklimit": 100,
+    "type": "tradingcard"
   },
   "FBI (Foil)": {
     "buy": 2,
     "sell": 3,
     "instock": 0,
-    "stocklimit": 100
+    "stocklimit": 100,
+    "type": "tradingcard"
   },
   "Balkan (Foil)": {
     "buy": 2,
     "sell": 3,
     "instock": 0,
-    "stocklimit": 100
+    "stocklimit": 100,
+    "type": "tradingcard"
   },
   "IDF (Foil)": {
     "buy": 2,
     "sell": 3,
     "instock": 0,
-    "stocklimit": 100
+    "stocklimit": 100,
+    "type": "tradingcard"
   },
   "SWAT (Foil)": {
     "buy": 2,
     "sell": 3,
     "instock": 0,
-    "stocklimit": 100
+    "stocklimit": 100,
+    "type": "tradingcard"
   },
   "SWAT": {
     "buy": 2,
     "sell": 3,
     "instock": 0,
-    "stocklimit": 100
+    "stocklimit": 100,
+    "type": "tradingcard"
   },
   "IDF": {
     "buy": 2,
     "sell": 3,
     "instock": 1,
-    "stocklimit": 100
+    "stocklimit": 100,
+    "type": "tradingcard"
   },
   "Balkan": {
     "buy": 2,
     "sell": 3,
     "instock": 0,
-    "stocklimit": 100
+    "stocklimit": 100,
+    "type": "tradingcard"
   },
   "FBI": {
     "buy": 2,
     "sell": 3,
     "instock": 0,
-    "stocklimit": 100
+    "stocklimit": 100,
+    "type": "tradingcard"
   },
   "Anarchist": {
     "buy": 2,
     "sell": 3,
     "instock": 0,
-    "stocklimit": 100
+    "stocklimit": 100,
+    "type": "tradingcard"
   }
 }

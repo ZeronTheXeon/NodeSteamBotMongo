@@ -71,14 +71,14 @@ function processOffer(offer) {
 		var theirValue = 0;
 		var currentstock = 0;
 		var StockLimit = 0;
-		var filestockname = './/settings/Prices/DefaultPrice.json';
+		var filestockname = './/settings/Prices/DefaultPrices.json';
 		var filestock = require(filestockname);
 		for (var i in ourItems) {
 			var item = ourItems[i].market_name;
 			if (CurrencyPrices[item]) {
 				currentstock = CurrencyPrices[item].instock;
 				StockLimit = CurrencyPrices[item].stocklimit;
-				filestockname = './/settings/Prices/Currency Prices.json';
+				filestockname = './/settings/Prices/CurrencyPrices.json';
 			} else if (SkinPrices[item]) {
 				currentstock = SkinPrices[item].instock;
 				StockLimit = SkinPrices[item].stocklimit;
@@ -117,7 +117,7 @@ function processOffer(offer) {
 			if (CurrencyPrices[item]) {
 				currentstock = CurrencyPrices[item].instock;
 				StockLimit = CurrencyPrices[item].stocklimit;
-				filestockname = './/settings/Prices/Currency Prices.json';
+				filestockname = './/settings/Prices/CurrencyPrices.json';
 			} else if (SkinPrices[item]) {
 				currentstock = SkinPrices[item].instock;
 				StockLimit = SkinPrices[item].stocklimit;
