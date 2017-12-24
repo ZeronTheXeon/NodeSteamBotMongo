@@ -216,7 +216,6 @@ function processOffer(offer)
         let stockLimit = 0;
         let sellPrice = 0;
         let buyPrice = 0;
-        let dataValue = 0;
         for (let i in ourItems)
         {
             let item = ourItems[i].market_hash_name;
@@ -240,14 +239,10 @@ function processOffer(offer)
                         ourValue += sellPrice;
                         break;
                     case "csgoskin":
-                        market.getItemsPrice(730, item, function (data)
-                        {
-                            console.log(data);
-                            ourValue += parseFloat(data[item].lowest_price.replace("$", '').trim());
-                        });
+                        ourValue += marketPrice(730, item);
                         break;
                     default:
-                        //TODO Get backpack.tf price from here
+                        //TODO Get backpack.tf price or other from here
                         console.log(timestamp() + " Invalid Value.");
                         ourValue += 99999;
                         break;
@@ -267,7 +262,7 @@ function processOffer(offer)
                     }
                 })
             }
-        }
+        } // end foreach in ourItems
         for (let i in theirItems)
         {
             let item = theirItems[i].market_hash_name;
@@ -291,11 +286,7 @@ function processOffer(offer)
                         theirValue += buyPrice;
                         break;
                     case "csgoskin":
-                        market.getItemsPrice(730, item, function (data)
-                        {
-                            console.log(data);
-                            theirValue += parseFloat(data[item].lowest_price.replace("$", '').trim());
-                        });
+                        theirValue += marketPrice(730, item);
                         break;
                     default:
                         //TODO Get backpack.tf price from here
@@ -315,7 +306,7 @@ function processOffer(offer)
                     });
                 });
             }
-        } // end for in theirItems
+        } // end foreach in theirItems
         
         setTimeout(function ()
         {
@@ -374,6 +365,19 @@ manager.on('receivedOfferChanged', (offer) =>
         }
     }
 });
+
+function marketPrice(appid, item)
+{
+    market.getItemsPrice(appid, item, function (data)
+    {
+        console.log(data);
+        if (!data.success)
+        {
+            throw new Error("ItemPrice was not successfully obtained!");
+        }
+        return parseFloat(data[item].lowest_price.replace("$", '').trim());
+    });
+}
 
 function logToFile(file, str)
 {
