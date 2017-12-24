@@ -62,3 +62,6 @@ typings/
 
 # prevent showing passwords
 settings/config.json
+
+#stop data
+data/

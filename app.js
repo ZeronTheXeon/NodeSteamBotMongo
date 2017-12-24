@@ -3,6 +3,7 @@
 
 const config = require('./settings/config.json');
 
+const request = require('request');
 const SteamTotp = require('steam-totp');
 const SteamUser = require('steam-user');
 const SteamCommunity = require('steamcommunity');
@@ -11,6 +12,8 @@ const fs = require('fs');
 const colors = require('colors'); // Is supposedly used
 const jsonfile = require('jsonfile');
 const market = require('steam-market-pricing');
+const bptf = require('backpacktf');
+const bptfkey = config.Backpacktfkey;
 
 const adminConfig = require('./AdminOptions/Config.json');
 const creatorConfig = require('./CreatorProperties/Config.json');
@@ -49,7 +52,28 @@ client.on('loggedOn', () =>
     console.log(timeStamp(true) + ' successfully logged on.');
     client.setPersona(SteamUser.Steam.EPersonaState.Online, config.SteamName);
     client.gamesPlayed(gameConfig.games.randItem());
+    getCommPrices();
+    getCurrencyPrices();
+    setInterval(getCommPrices, 600000);
+    setInterval(getCurrencyPrices, 600000);
 });
+
+function getCommPrices()
+{
+    console.log("Getting community prices from backpack.tf!");
+    bptf.getCommunityPrices(bptfkey, "440", function (err, data)
+    {
+        if (err) console.log("Error: " + err.message);
+        else writeToFile("data/tf2communityprices.json", JSON.stringify(data));
+    });
+}
+
+function getCurrencyPrices()
+{
+    console.log("Getting currency prices from backpack.tf!");
+    // This should be implemented in the base backpacktf package sometime
+    console.log(getCurrencies(bptfkey, 440));
+}
 
 
 client.on('friendRelationship', (steamID, relationship) =>
@@ -62,7 +86,7 @@ client.on('friendRelationship', (steamID, relationship) =>
     }
 });
 
-client.on('webSession', (sessionid, cookies) =>
+client.on("webSession", (sessionid, cookies) =>
 {
     manager.setCookies(cookies);
     community.setCookies(cookies);
@@ -71,7 +95,7 @@ client.on('webSession', (sessionid, cookies) =>
 
 client.on("friendMessage", function (steamID, message)
 {
-    logToFile('./Logs/Message.log', "\r\n" + timeStamp() + "'" + steamID + "'" + message + "--");
+    appendToFile('./Logs/Message.log', "\r\n" + timeStamp() + " '" + steamID + "'" + message + "--");
     message.toLowerCase();
     let replyMessage = "Sorry, I don't know that command! Type !help for more info :)";
     switch (message)
@@ -111,7 +135,7 @@ client.on("friendMessage", function (steamID, message)
         }
     }
     client.chatMessage(steamID, replyMessage);
-    logToFile('./Logs/Message.log', "\r\n" + timeStamp() + replyMessage + "--");
+    appendToFile('./Logs/Message.log', "\r\n" + timeStamp() + replyMessage + "--");
 });
 
 function acceptOffer(offer)
@@ -207,107 +231,13 @@ function processOffer(offer)
     }
     else
     {
+        
         let ourItems = offer.itemsToGive;
         let theirItems = offer.itemsToReceive;
-        let itemType = 'basictype';
         let ourValue = 0;
         let theirValue = 0;
-        let currentStock = 0;
-        let stockLimit = 0;
-        let sellPrice = 0;
-        let buyPrice = 0;
-        for (let i in ourItems)
-        {
-            let item = ourItems[i].market_hash_name;
-            if (PlayerSetPrices[item])
-            {
-                currentStock = PlayerSetPrices[item].currentstock;
-                stockLimit = PlayerSetPrices[item].stocklimit;
-                itemType = PlayerSetPrices[item].type;
-                sellPrice = PlayerSetPrices[item].sell;
-                buyPrice = PlayerSetPrices[item].buy;
-            } // TODO: Add check if not in file
-            if (fs.readFile(pricesFileName))
-            {
-                console.log(timeStamp(true) + " Our " + item + " - stock number: " + currentStock + " / " + stockLimit + ".")
-            }
-            if (currentStock < stockLimit)
-            {
-                switch (itemType)
-                {
-                    case "csgocurrency":
-                        ourValue += sellPrice;
-                        break;
-                    case "csgoskin":
-                        ourValue += marketPrice(730, item);
-                        break;
-                    default:
-                        //TODO Get backpack.tf price or other from here
-                        console.log(timestamp() + " Invalid Value.");
-                        ourValue += 99999;
-                        break;
-                }
-            }
-            else if (currentStock >= stockLimit)
-            {
-                console.log(timeStamp(true) + item + " Stock Limit Reached");
-                manager.on('receivedOfferChanged', (offer) =>
-                {
-                    if (adminConfig.disableAdminComments)
-                    {
-                        community.postUserComment(offer.partner.toString(), item + " - Stock Limit Reached", (err) =>
-                        {
-                            if (err) throw err.message;
-                        });
-                    }
-                })
-            }
-        } // end foreach in ourItems
-        for (let i in theirItems)
-        {
-            let item = theirItems[i].market_hash_name;
-            if (PlayerSetPrices[item])
-            {
-                currentStock = PlayerSetPrices[item].currentstock;
-                stockLimit = PlayerSetPrices[item].stocklimit;
-                itemType = PlayerSetPrices[item].type;
-                sellPrice = PlayerSetPrices[item].sell;
-                buyPrice = PlayerSetPrices[item].buy;
-            } // TODO: Add check if not in file
-            if (fs.readFileSync(pricesFileName))
-            {
-                console.log(timeStamp(true) + " Their " + item + " - stock number: " + currentStock + " / " + stockLimit + ".")
-            }
-            if (currentStock < stockLimit)
-            {
-                switch (itemType)
-                {
-                    case "csgocurrency":
-                        theirValue += buyPrice;
-                        break;
-                    case "csgoskin":
-                        theirValue += marketPrice(730, item);
-                        break;
-                    default:
-                        //TODO Get backpack.tf price from here
-                        console.log(timestamp() + " Invalid Value.");
-                        theirValue += 99999;
-                        break;
-                }
-            }
-            else if (currentStock >= stockLimit)
-            {
-                console.log(timeStamp(true) + item + " Stock Limit Reached");
-                manager.on('receivedOfferChanged', (offer) =>
-                {
-                    community.postUserComment(offer.partner.toString(), item + " has reached stock limit!", (err) =>
-                    {
-                        if (err) throw err.message;
-                    });
-                });
-            }
-        } // end foreach in theirItems
-        
+        processItemsFromOffer(theirItems, theirValue, true);
+        processItemsFromOffer(ourItems, ourValue, false);
         setTimeout(function ()
         {
             console.log(timeStamp(true) + " Our value: " + ourValue);
@@ -327,6 +257,72 @@ function processOffer(offer)
             declineOffer(offer);
         }
     }
+}
+
+function processItemsFromOffer(items, valuevar, theirs)
+{
+    let itemType = 'basictype';
+    let currentStock = 0;
+    let stockLimit = 0;
+    let sellPrice = 0;
+    let buyPrice = 0;
+    for (let i in items)
+    {
+        let item = items[i].market_hash_name;
+        if (PlayerSetPrices[item])
+        {
+            currentStock = PlayerSetPrices[item].currentstock;
+            stockLimit = PlayerSetPrices[item].stocklimit;
+            itemType = PlayerSetPrices[item].type;
+            sellPrice = PlayerSetPrices[item].sell;
+            buyPrice = PlayerSetPrices[item].buy;
+        } // TODO: Add else check if not in file
+        if (fs.readFile(pricesFileName))
+        {
+            console.log(timeStamp(true) + (theirs ? " Their " : " Our ") + item + " - stock number: " + currentStock + " / " + stockLimit + ".")
+        }
+        if (currentStock < stockLimit)
+        {
+            switch (itemType)
+            {
+                case "csgocurrency":
+                    valuevar += sellPrice;
+                    break;
+                case "csgoskin":
+                    valuevar += marketPrice(730, item);
+                    break;
+                default:
+                    //TODO Get backpack.tf price or other from here
+                    console.log(timestamp() + " Invalid Value.");
+                    valuevar += 99999;
+                    break;
+            }
+        }
+        else if (currentStock >= stockLimit)
+        {
+            console.log(timeStamp(true) + item + " Stock Limit Reached");
+            manager.on('receivedOfferChanged', (offer) =>
+            {
+                if (!theirs)
+                {
+                    if (adminConfig.disableAdminComments)
+                    {
+                        community.postUserComment(offer.partner.toString(), item + " - Stock Limit Reached", (err) =>
+                        {
+                            if (err) throw err.message;
+                        });
+                    }
+                }
+                else
+                {
+                    community.postUserComment(offer.partner.toString(), item + " has reached stock limit!", (err) =>
+                    {
+                        if (err) throw err.message;
+                    });
+                }
+            });
+        }
+    } // end for loop
 }
 
 manager.on('receivedOfferChanged', (offer) =>
@@ -379,13 +375,22 @@ function marketPrice(appid, item)
     });
 }
 
-function logToFile(file, str)
+function appendToFile(file, str)
 {
-    fs.appendFile(file, str, (err) =>
+    fs.appendFile(file, str, 'a', (err) =>
     {
         if (err) throw err;
     });
 }
+
+function writeToFile(file, str)
+{
+    fs.writeFile(file, str, (err) =>
+    {
+        if (err) throw err;
+    });
+}
+
 
 function timeStamp(x)
 {
@@ -423,3 +428,45 @@ manager.on('newOffer', (offer) =>
 {
     processOffer(offer);
 });
+
+
+// Next two functions are adapted from https://www.npmjs.com/package/backpacktf unused parts
+// TODO: Will be implemented in backpacktf package sometime
+function queryAPI(method, v, key, format, adds)
+{
+    let urltouse = "https://backpack.tf/api/" + method + "/" + v + "?key=" + key + "&format=" + format + adds;
+    try
+    {
+        request(urltouse, function (err, res, body)
+        {
+            if (err)
+            {
+                throw(err);
+            }
+            else
+            {
+                return (JSON.parse(body));
+            }
+        })
+    }
+    catch (err)
+    {
+        throw(err);
+    }
+}
+
+
+function getCurrencies(key, appid)
+{
+    queryAPI("IGetCurrencies", "v1", key, "json", "&appid=" + appid, function (data)
+    {
+        if (data.response.success === 0)
+        {
+            throw(new Error(data.response.message));
+        }
+        else
+        {
+            return data;
+        }
+    });
+}
