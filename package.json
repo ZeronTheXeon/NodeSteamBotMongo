@@ -11,14 +11,15 @@
     "request": "^2.83.0",
     "steam-market-pricing": "^1.0.4",
     "steam-totp": "^2.0.1",
-    "steam-tradeoffer-manager": "^2.9.2",
+    "steam-tradeoffer-manager": "^2.9.3",
     "steam-user": "^3.23.2",
     "steamcommunity": "^3.33.2",
     "steamid": "^1.1.0"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "node app.js"
+    "test": "node app.js",
+    "start": "node app.js"
   },
   "author": "TheXeon / LonsterMonster",
   "license": "ISC",
