@@ -72,7 +72,10 @@ function getCurrencyPrices()
 {
     console.log("Getting currency prices from backpack.tf!");
     // This should be implemented in the base backpacktf package sometime
-    console.log(getCurrencies(bptfkey, 440));
+    getCurrencies(bptfkey, function (data)
+    {
+        writeToFile("data/tf2currencyprices.json", JSON.stringify(data));
+    });
 }
 
 
@@ -432,41 +435,23 @@ manager.on('newOffer', (offer) =>
 
 // Next two functions are adapted from https://www.npmjs.com/package/backpacktf unused parts
 // TODO: Will be implemented in backpacktf package sometime
-function queryAPI(method, v, key, format, adds)
+function queryAPI(method, v, key, format, adds, callback)
 {
     let urltouse = "https://backpack.tf/api/" + method + "/" + v + "?key=" + key + "&format=" + format + adds;
-    try
+    request({url: urltouse, method: 'GET', json: true}, function (err, res, body)
     {
-        request(urltouse, function (err, res, body)
-        {
-            if (err)
-            {
-                throw(err);
-            }
-            else
-            {
-                return (JSON.parse(body));
-            }
-        })
-    }
-    catch (err)
-    {
-        throw(err);
-    }
+        callback(body);
+    });
 }
 
 
-function getCurrencies(key, appid)
+function getCurrencies(key, callback)
 {
-    queryAPI("IGetCurrencies", "v1", key, "json", "&appid=" + appid, function (data)
+    queryAPI("IGetCurrencies", "v1", key, "json", "", function (data)
     {
         if (data.response.success === 0)
-        {
-            throw(new Error(data.response.message));
-        }
+            throw new Error(data.response.message);
         else
-        {
-            return data;
-        }
+            callback(data);
     });
 }
