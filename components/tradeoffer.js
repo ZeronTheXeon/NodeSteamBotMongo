@@ -1,5 +1,5 @@
-const app = require('../../app.js');
-const config = require('../config.json');
+const app = require('../app.js');
+const config = require('../settings/config.json');
 const Game = require('.//Game.js');
 const SteamTotp = require('steam-totp');
 const SteamUser = require('steam-user');

@@ -2,2095 +2,2095 @@
   "The Short Circuit": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Kritzkrieg": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Red-Tape Recorder": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Bootlegger": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Concheror": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Family Business": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Direct Hit": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Quickiebomb Launcher ": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Amputator": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Amputator": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Air Strike": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Air Strike": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Ali Baba's Wee Booties": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Ali Baba's Wee Booties": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Apoco-Fists": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Atomizer": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Atomizer": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Axtinguisher": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Axtinguisher": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The B.A.S.E. Jumper": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable B.A.S.E. Jumper": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Baby Face's Blaster": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Baby Face's Blaster": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Back Scatter": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-CraftableBack Scatter": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Back Scratcher": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Back Scratcher": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Backburner": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Backburner": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Bat Outta Hell": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Bat Outta Hell": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Batsaber": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Batsaber": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Battalion's Backup": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Battalion's Backup": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Bazaar Bargain": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Bazaar Bargain": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Beggar's Bazooka": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Beggar's Bazooka": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Big Earner": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Big Earner": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Black Rose": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Black Rose": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Black Box": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Black Box": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Bonesaw": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Bonesaw": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Bonk! Atomic Punch": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Bonk! Atomic Punch": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Boston Basher": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Boston Basher": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Bottle": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Bottle": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Bat": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Bat": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Brass Beast": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Brass Beast": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Bread Bite": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Bread Bite": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Buff Banner": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Buff Banner": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Buffalo Steak Sandvich": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Buffalo Steak Sandvich": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Bushwacka": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Bushwacka": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The C.A.P.P.E.R": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable C.A.P.P.E.R": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Candy Cane": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Candy Cane": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Claidheamh Mòr": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Claidheamh Mòr": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Classic": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Classic": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Cleaner's Carbine": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Cleaner's Carbine": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Conniver's Kunai": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Conniver's Kunai": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Conscientious Objector": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Conscientious Objector": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Cow Mangler 5000": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Cow Mangler 5000": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Cozy Camper": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Cozy Camper": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Crit-a-Cola": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Crit-a-Cola": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Crossing Guard": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Crossing Guard": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Dalokohs Bar": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Dalokohs Bar": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Darwin's Danger Shield": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Darwin's Danger Shield": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Dead Ringer": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Dead Ringer": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Degreaser": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Degreaser": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Detonator": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Detonator": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Diamondback": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Diamondback": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Disciplinary Action": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Disciplinary Action": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Enforcer": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Enforcer": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Equalizer": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Equalizer": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Escape Plan": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Escape Plan": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Eureka Effect": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Eureka Effect": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Eviction Notice": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Eviction Notice": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Eyelander": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Eyelander": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Fan O'War": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Fan O'War": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Fire Axe": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Fire Axe": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Fishcake": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Fishcake": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Fists": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Fists": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Fists of Steel": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Fists of Steel": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Flame Thrower": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Flame Thrower": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Flare Gun": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Flare Gun": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Flying Guillotine": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Flying Guillotine": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Force-A-Nature": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Force-A-Nature": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Fortified Compound": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Fortified Compound": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Freedom Staff": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Freedom Staff": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Frontier Justice": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Frontier Justice": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Frying Pan": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Frying Pan": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Giger Counter": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Giger Counter": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Gloves of Running Urgently": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Gloves of Running Urgently": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Grenade Launcher": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Grenade Launcher": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Gunboats": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Gunboats": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Gunslinger": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Gunslinger": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Half-Zatoichi": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Half-Zatoichi": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Ham Shank": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Ham Shank": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Hitman's Heatmaker": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Hitman's Heatmaker": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Holiday Punch": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Holiday Punch": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Holy Mackerel": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Holy Mackerel": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Homewrecker": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Homewrecker": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Huntsman": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Huntsman": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Huo-Long Heater": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Huo-Long Heater": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Invis Watch": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Invis Watch": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Iron Fist": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Iron Fist": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Iron Bomber": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Iron Bomber": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Jag": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Jag": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Jarate": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Jarate": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Killing Gloves of Boxing": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Killing Gloves of Boxing": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Knife": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Knife": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Kukri": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Kukri": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The L'Etranger": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable L'Etranger": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Liberty Launcher": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Liberty Launcher": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Loch-n-Load": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Loch-n-Load": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Lollichop": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Lollichop": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Loose Cannon": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Loose Cannon": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Vintage Lugermorph": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Vintage Lugermorph": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Machina": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Machina": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Mad Milk": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Mad Milk": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Manmelter": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Manmelter": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Mantreads": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Mantreads": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Market Gardener": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Market Gardener": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Maul": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Maul": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Medi Gun": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Medi Gun": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Minigun": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Minigun": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Mutated Milk": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Mutated Milk": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Natascha": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Natascha": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Neon Annihilator": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Neon Annihilator": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Nessie's Nine Iron": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Nessie's Nine Iron": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Nostromo Napalmer": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Nostromo Napalmer": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Original": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Original": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Overdose": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Overdose": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Pain Train": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Pain Train": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Panic Attack": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Panic Attack": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Persian Persuader": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Persian Persuader": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Phlogistinator": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Phlogistinator": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Pistol": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Pistol": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Pomson 6000": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Pomson 6000": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Postal Pummeler": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Postal Pummeler": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Powerjack": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Powerjack": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Pretty Boy's Pocket Pistol": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Pretty Boy's Pocket Pistol": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Quick-Fix": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Quick-Fix": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Quickiebomb Launcher": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Quickiebomb Launcher": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Quäckenbirdt": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Quäckenbirdt": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Rainblower": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Rainblower": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Razorback": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Razorback": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Rescue Ranger": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Rescue Ranger": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Reserve Shooter": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Reserve Shooter": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Revolver": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Revolver": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Righteous Bison": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Righteous Bison": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Genuine Robo-Sandvich": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Genuine Non-Craftable Robo-Sandvich": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Rocket Jumper": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Rocket Jumper": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Rocket Launcher": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Rocket Launcher": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "SMG": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable SMG": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Sandman": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Sandman": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Sandvich": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Sandvich": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Sapper": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Sapper": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Scattergun": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Scattergun": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Scorch Shot": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Scorch Shot": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Scotsman's Skullcutter": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Scotsman's Skullcutter": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Scottish Handshake": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Scottish Handshake": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Scottish Resistance": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Scottish Resistance": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Self-Aware Beauty Mark": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Self-Aware Beauty Mark": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Shahanshah": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Shahanshah": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Sharp Dresser": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Sharp Dresser": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Sharpened Volcano Fragment": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Sharpened Volcano Fragment": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Shooting Star": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Shooting Star": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Shortstop": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Shortstop": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Shotgun": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Shotgun": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Shovel": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Shovel": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Sniper Rifle": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Sniper Rifle": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Soda Popper": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Soda Popper": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Solemn Vow": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Solemn Vow": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The SouThern Hospitality": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable SouThern Hospitality": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Spy-cicle": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Spy-cicle": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Stickybomb Launcher": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Stickybomb Launcher": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Sun-on-a-Stick": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Sun-on-a-Stick": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Sydney Sleeper": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Sydney Sleeper": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Third Degree": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Third Degree": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Three-Rune Blade": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Three-Rune Blade": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Tide Turner": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Tide Turner": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Tomislav": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Tomislav": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Tribalman's Shiv": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Tribalman's Shiv": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Ubersaw": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Ubersaw": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Ullapool Caber": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Ullapool Caber": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Unarmed Combat": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Unarmed Combat": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Vaccinator": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Vaccinator": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Vita-Saw": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Vita-Saw": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Wanga Prick": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Wanga Prick": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Warrior's Spirit": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Warrior's Spirit": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Widowmaker": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Widowmaker": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Wrangler": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Wrangler": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Wrap Assassin": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Wrap Assassin": {
     "buy": 0.0555,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Wrench": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Wrench": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "The Your Eternal Reward": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   },
   "Non-Craftable Your Eternal Reward": {
     "buy": 0.055,
     "sell": 0.055,
-    "instock": 0,
-    "stocklimit": 3
+    "currentStock": 0,
+    "stockLimit": 3
   }
 }

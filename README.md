@@ -18,9 +18,8 @@ This is a fork of [Lonster Monster's Node Steambot GO](https://github.com/Lonste
     g. npm install raven
     h. npm install steamid
     i. npm install colors
-    j. npm install jsonfile
-    k. npm install steamcommunity
-	l. npm install steam-market-pricing
+    j. npm install steamcommunity
+	k. npm install steam-market-pricing
 ``` 
 
 4. Go to the setting folder.
