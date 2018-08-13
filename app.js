@@ -60,7 +60,7 @@ try {
 client.on('loggedOn', () => {
     console.log(timeStamp() + ' successfully logged on.');
     client.setPersona(SteamUser.EPersonaState.Online, config.SteamName);
-    client.gamesPlayed(gameConfig.games.randItem());
+    client.gamesPlayed(randItem(gameConfig.games));
     getTF2CommunityPrices();
     getTF2CurrencyPrices();
     setInterval(getTF2CommunityPrices, 600000);
@@ -69,7 +69,7 @@ client.on('loggedOn', () => {
 
 function getTF2CommunityPrices() {
     console.log("Getting community prices from backpack.tf!");
-    bptf.getCommunityPrices(bptfkey, "440", function (err, data) {
+    bptf.getCommunityPrices(bptfkey, "440", (err, data) => {
         if (err) {
             console.log("Error: " + err.message);
         } else {
@@ -81,9 +81,10 @@ function getTF2CommunityPrices() {
 function getTF2CurrencyPrices() {
     console.log("Getting currency prices from backpack.tf!");
     // This should be implemented in the base backpack tf package sometime
-    getCurrencies(bptfkey, function (data) {
-        writeToFile("data/tf2currencyprices.json", JSON.stringify(data));
-    });
+    getCurrencies(bptfkey, (data) => {
+            writeToFile("data/tf2currencyprices.json", JSON.stringify(data));
+        }
+    );
 }
 
 
@@ -96,13 +97,13 @@ client.on('friendRelationship', (steamID, relationship) => {
     }
 });
 
-client.on("webSession", (sessionid, cookies) => {
+client.on("webSession", (sessionId, cookies) => {
     manager.setCookies(cookies);
     community.setCookies(cookies);
     community.startConfirmationChecker(20000, config.IdentitySecret);
 });
 
-client.on("friendMessage", function (steamID, message) {
+client.on("friendMessage", (steamID, message) => {
     appendToFile('./Logs/Message.log', "\r\n" + timeStamp() + " '" + steamID + "'" + message + "--");
     message.toLowerCase();
     let replyMessage = "Sorry, I don't know that command! Type !help for more info :)";
@@ -117,29 +118,26 @@ client.on("friendMessage", function (steamID, message) {
         case "!group":
             replyMessage = messageConfig.Group;
             break;
+        case "!buy trading cards":
+            replyMessage = messageConfig.BuyCards;
+            break;
+        case "!sell trading cards":
+            replyMessage = messageConfig.SellCards;
+            break;
+        case "!buy backgrounds":
+            replyMessage = messageConfig.BuyBackgrounds;
+            break;
+        case "!sell backgrounds":
+            replyMessage = messageConfig.SellBackgrounds;
+            break;
+        case "!buy emoticons":
+            replyMessage = messageConfig.BuyEmoticons;
+            break;
+        case "!sell emoticons":
+            replyMessage = messageConfig.SellEmoticons;
+            break;
     }
-    if (config.SpecialItems) {
-        switch (message) {
-            case "!buy trading cards":
-                replyMessage = messageConfig.BuyCards;
-                break;
-            case "!sell trading cards":
-                replyMessage = messageConfig.SellCards;
-                break;
-            case "!buy backgrounds":
-                replyMessage = messageConfig.BuyBackgrounds;
-                break;
-            case "!sell backgrounds":
-                replyMessage = messageConfig.SellBackgrounds;
-                break;
-            case "!buy emoticons":
-                replyMessage = messageConfig.BuyEmoticons;
-                break;
-            case "!sell emoticons":
-                replyMessage = messageConfig.SellEmoticons;
-                break;
-        }
-    }
+
     client.chatMessage(steamID, replyMessage);
     appendToFile('./Logs/Message.log', "\r\n" + timeStamp() + replyMessage + "--");
 });
@@ -197,12 +195,10 @@ function processOffer(offer) {
     if (offer.isGlitched() || offer.state === 11) {
         console.log(timeStamp() + " Offer was glitched, declining.");
         declineOffer(offer);
-    }
-    else if (offer.partner.getSteamID64() === config.OwnerID) {
+    } else if (offer.partner.getSteamID64() === adminConfig.AdminID) {
         acceptOffer(offer);
         // TODO: retake stock here to prevent stock issues
-    }
-    else {
+    } else {
 
         let ourItems = offer.itemsToGive;
         let theirItems = offer.itemsToReceive;
@@ -210,17 +206,16 @@ function processOffer(offer) {
         let theirValue = 0;
         processItemsFromOffer(theirItems, theirValue, true);
         processItemsFromOffer(ourItems, ourValue, false);
-        setTimeout(function () {
+        setTimeout(() => {
             console.log(timeStamp() + " Our value: " + ourValue);
         }, 2000);
-        setTimeout(function () {
+        setTimeout(() => {
             console.log(timeStamp() + " Their value: " + theirValue);
         }, 2000);
         if (ourValue <= theirValue) {
             acceptOffer(offer);
             StockManagerOffer(offer);
-        }
-        else if (ourValue > theirValue) {
+        } else if (ourValue > theirValue) {
             console.log(timeStamp() + " Their value was different.");
             declineOffer(offer);
         }
@@ -236,8 +231,8 @@ function processItemsFromOffer(items, valueVar, theirs) {
     items.forEach((item) => {
         let itemName = item.market_hash_name;
         if (PlayerSetPrices[itemName]) {
-            currentStock = PlayerSetPrices[itemName].currentStock;
-            stockLimit = PlayerSetPrices[itemName].stocklimit;
+            currentStock = PlayerSetPrices.itemName.currentStock;
+            stockLimit = PlayerSetPrices[itemName].stockLimit;
             itemType = PlayerSetPrices[itemName].type;
             sellPrice = PlayerSetPrices[itemName].sell;
             buyPrice = PlayerSetPrices[itemName].buy;
@@ -305,7 +300,7 @@ manager.on('receivedOfferChanged', (offer) => {
 });
 
 function marketPrice(appid, item) {
-    market.getItemsPrice(appid, item, function (data) {
+    market.getItemsPrice(appid, item, (data) => {
         console.log(data);
         if (!data.success) {
             throw new Error("ItemPrice was not successfully obtained!");
@@ -368,19 +363,17 @@ manager.on('newOffer', (offer) => {
     processOffer(offer);
 });
 
-
 // Next two functions are adapted from https://www.npmjs.com/package/backpacktf unused parts
 // TODO: Will be implemented in backpacktf package sometime
 function queryAPI(method, v, key, format, adds, callback) {
     let urlToUse = "https://backpack.tf/api/" + method + "/" + v + "?key=" + key + "&format=" + format + adds;
-    request({url: urlToUse, method: 'GET', json: true}, function (err, res, body) {
+    request({url: urlToUse, method: 'GET', json: true}, (err, res, body) => {
         callback(body);
     });
 }
 
-
 function getCurrencies(key, callback) {
-    queryAPI("IGetCurrencies", "v1", key, "json", "", function (data) {
+    queryAPI("IGetCurrencies", "v1", key, "json", "", (data) => {
         if (data.response.success === 0) {
             throw new Error(data.response.message);
         } else {
