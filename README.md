@@ -1,6 +1,6 @@
 # Node-Steam-Bot v1.0.
 
-This is a fork of [Lonster Monster's Node Steambot GO](https://github.com/LonsterTheMonster/Steam_GO_BOt) and utilizes mongo-db to store all data that Lonster used mongo-db to store. This makes it callable from a website and easily storable.
+This is a fork of [Lonster Monster's Node Steambot GO](https://github.com/LonsterTheMonster/Steam_GO_BOt) and utilizes mongo-db to store all data that Lonster used json to store. This makes it callable from a website and natively changeable.
 
 ## Lonster's Instructions
 
